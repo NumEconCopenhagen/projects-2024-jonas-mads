@@ -1,11 +1,10 @@
-# \[Group name\]
+# \[Jonas & Mads\]
 
 **Group members:**
-- A
-- B
-- C
+- Jonas Kristensen (TVP211)
+- Mads Rye Nielsen (BNC277)
 
 This repository contains  
 1. Inaugural project. 
-2. Data project. We fetch data from **source x** on **y** and show that ...
-3. Model project. We model ...
+2. Data project. 
+3. Model project.
