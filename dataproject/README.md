@@ -1,14 +1,13 @@
-# Data analysis project
+This project analyzes economic indicators using data retrieved from the Federal Reserve Economic Data (FRED) API. Key indicators include GDP, inflation, unemployment rate, and interest rates for the United States over the past 30 years.
 
-Our project is titled **PROJECT TITLE** and is about EXPLAIN.
+## Requirements
+- `fredapi` library
+  - https://github.com/mortada/fredapi/tree/master
+- 
 
-The **results** of the project can be seen from running [dataproject.ipynb](dataproject.ipynb).
+## Usage
+1. Clone the repository.
+2. Install required dependencies.
+3. Execute the Python script.
+4. Review the generated plots.
 
-We apply the **following datasets**:
-
-1. dataX.csv (*source*) 
-1. dataY.csv (*source*)
-
-**Dependencies:** Apart from a standard Anaconda Python 3 installation, the project requires the following installations:
-
-``pip install matplotlib-venn``
