@@ -2,7 +2,7 @@ This project analyzes economic indicators using data retrieved from the Federal 
 
 ## Requirements
 - `fredapi` library: https://github.com/mortada/fredapi/tree/master
-- This file is already included in this library, so it shouldnt be required to install it
+- This file is already included in this depository, so it shouldnt be required to install it
 
 ## Usage
 1. Clone the repository.
