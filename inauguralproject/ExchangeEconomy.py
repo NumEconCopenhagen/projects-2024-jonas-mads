@@ -54,4 +54,20 @@ class ExchangeEconomyClass:
 
         return eps1,eps2
     
+    def market_clearing_new_endowments(self,p1,w1A,w2A):
+        
+        w1B = 1 - w1A
+        w2B = 1 - w2A
+        
+        x1A = self.par.alpha * (p1 * w1A + 1 * w2A) / (p1)
+        x2A = (1 - self.par.alpha) * (p1 * w1A + 1 * w2A) / 1
+        
+        x1B = self.par.beta * (p1 * w1B + 1 * w2B) / (p1)
+        x2B = (1 - self.par.beta) * (p1 * w1B + 1 * w2B) / 1
+        
+        eps1 = x1A - w1A + x1B - (1 - w1A)
+        eps2 = x2A - w2A + x2B - (1 - w2A)
+
+        return eps1,eps2
+    
     
