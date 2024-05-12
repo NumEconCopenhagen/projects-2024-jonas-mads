@@ -1,4 +1,4 @@
-## Solow Model Visualization
+## Solow Model
 This project offers functions to visualize and compute the Solow economic growth model and its extended version.
 
 ### Functionality
