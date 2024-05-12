@@ -1,15 +1,9 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat May 11 11:42:37 2024
-
-@author: jonas
-"""
-
+# Imports
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
 
-# Setting model parameters for the extended Solow model
+# Setting model parameters for both the basic and extended Solow model
 A_val, s_val, alpha_val, delta_val, n_val, g_val = 3, 0.2, 0.3, 0.4, 0.05, 0.05
 x_init_val = 0.25
 x_min_val, x_max_val = 0, 3
@@ -21,11 +15,6 @@ def f_function(A, s, alpha, delta, k):
 # Function to calculate the next period's capital stock in the extended Solow model
 def f_function_extended(A, s, alpha, delta, n, g, k):
     return A * s * k**alpha + (n + g + delta) * k
-
-# Function to find the steady-state capital per effective worker (k*)
-def find_steady_state_extended(A, s, alpha, delta, n, g):
-    k_star = ((s * A) / (n + g + delta))**(1 / (1 - alpha))
-    return k_star
 
 # Function to plot the 45-degree line and the f(k) function
 def plot_diagonal(k_star=None,extended=0):
@@ -81,6 +70,33 @@ def plot_diagonal(k_star=None,extended=0):
     # Displaying the plot
     plt.show()
 
+def find_steady_state_capital(A, s, alpha, delta, k_guess=1.0 , tolerance=1e-6, max_iterations=10000):
+    """
+    Function to find the steady-state capital using iteration.
+
+    Parameters:
+        A (float): Total factor productivity.
+        s (float): Savings rate.
+        alpha (float): Capital share in output.
+        delta (float): Depreciation rate.
+        k_guess (float): Initial guess for steady-state capital. Default is 1.0.
+        tolerance (float): Tolerance level for convergence. Default is 1e-6.
+        max_iterations (int): Maximum number of iterations. Default is 10000.
+
+    Returns:
+        float: Steady-state capital.
+    """
+    for i in range(max_iterations):
+        k_next = f_function(A, s, alpha, delta, k_guess)
+        
+        # Check for convergence
+        if abs(k_next - k_guess) < tolerance:
+            return k_next
+        
+        k_guess = k_next  # Update guess for the next iteration
+        
+    # If not converged within the maximum iterations, return None
+    return None
 
 # Function to plot the 45-degree line and the f(k) function
 def plot_diagonal_params(A, s, alpha, delta, color, label, k_star=None):
@@ -107,7 +123,7 @@ def plot_scenarios(parameters):
 
     # Plotting for each scenario
     for params in parameters:
-        k_star_val = ((params['s'] * params['A']) / params['delta'])**(1 / (1 - params['alpha']))
+        k_star_val = find_steady_state_capital(params['A'], params['s'], params['alpha'], params['delta'])
         k_star_values.append(k_star_val)
         plot_diagonal_params(params['A'], params['s'], params['alpha'], params['delta'], params['color'], params['label'], k_star_val)
 
@@ -129,28 +145,7 @@ def plot_scenarios(parameters):
 
     return k_star_values
 
-
-# Calculating and plotting the steady-state capital
-k_star_val = ((s_val * A_val) / delta_val)**(1/(1 - alpha_val))
-plot_diagonal(k_star_val)
-
-print("Steady-state capital (k*):", k_star_val)
-
-
-# Example of usage
-parameters = [
-    {'A': 2, 's': 0.2, 'alpha': 0.2, 'delta': 0.4, 'color': 'purple', 'label': 'Scenario 1'},
-    {'A': 3, 's': 0.2, 'alpha': 0.3, 'delta': 0.4, 'color': 'red', 'label': 'Scenario 2'},
-    {'A': 2, 's': 0.3, 'alpha': 0.3, 'delta': 0.3, 'color': 'green', 'label': 'Scenario 3'}
-]
-
-k_star_values = plot_scenarios(parameters)
-print("Steady-state capital (k*) for each scenario:", k_star_values)
-
-
-# Calculate the steady-state level of capital per effective worker (k*)
-k_star = find_steady_state_extended(A_val, s_val, alpha_val, delta_val, n_val, g_val)
-print("Steady-state level of capital per effective worker (k*):", k_star)
-
-# Plot the 45-degree line and the f(k) function
-plot_diagonal(k_star,1)
+# Function to find the steady-state capital per effective worker (k*)
+def find_steady_state_extended(A, s, alpha, delta, n, g):
+    k_star = ((s * A) / (n + g + delta))**(1 / (1 - alpha))
+    return k_star
