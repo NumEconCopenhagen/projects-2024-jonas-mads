@@ -1,7 +1,14 @@
-# Model analysis project
+## Solow Model Visualization
+This project offers functions to visualize and compute the Solow economic growth model and its extended version.
 
-Our project is titled **PROJECT TITLE** and is about EXPLAIN.
+### Functionality
+- **Solow Model**: Plotting phase diagrams and calculating steady-state capital.
+- **Extended Solow Model**: Extending the basic model to include population and technological growth.
+  
+### Results
+- Provides visualizations of the Solow model's phase diagram.
+- Calculates steady-state capital for both basic and extended Solow models.
 
-The **results** of the project can be seen from running [modelproject.ipynb](modelproject.ipynb).
-
-**Dependencies:** Apart from a standard Anaconda Python 3 installation, the project requires no further packages.
+### Dependencies
+- `numpy`
+- `matplotlib`
