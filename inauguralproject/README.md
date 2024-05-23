@@ -9,6 +9,7 @@ Code Structure:
 The code consists of several assignments, each addressing a specific task related to the exchange economy model. Here's a brief overview of the assignments:
 
 Assignment 1: Generates and plots allocations satisfying the conditions in set C.
+
 Assignment 2: Checks market clearing conditions for different prices.
 Assignment 3: Finds the market clearing price using optimization.
 Assignment 4a & 4b: Determines the allocation maximizing utility for a given price.
