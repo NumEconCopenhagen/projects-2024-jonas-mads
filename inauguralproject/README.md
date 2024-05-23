@@ -1,4 +1,4 @@
-# Project README
+# Inaugural Project
 
 ## Group Members
 - **Jonas Kristensen** (TVP211)
