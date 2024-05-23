@@ -1,4 +1,4 @@
-# \[Jonas & Mads\]
+# Jonas & Mads
 
 **Group members:**
 - Jonas Kristensen (TVP211)
