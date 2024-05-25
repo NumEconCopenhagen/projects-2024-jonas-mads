@@ -1,4 +1,4 @@
-# Economic Indicators Analysis Project
+# Data Project
 
 ## Group Members
 - **Jonas Kristensen** (TVP211)
