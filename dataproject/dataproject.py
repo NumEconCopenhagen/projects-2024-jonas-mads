@@ -5,7 +5,7 @@ import matplotlib.dates as mdates
 import plotly.graph_objs as go
 from plotly.subplots import make_subplots
 
-# Initialize the FRED API client
+# FRED API called with API Key
 fred = Fred(api_key='e8b9ae83016cbd8575ae24ab46c990e1')
 
 # Economic indicators to be prompted for in the FRED API
