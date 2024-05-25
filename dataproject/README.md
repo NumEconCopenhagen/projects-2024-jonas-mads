@@ -19,7 +19,7 @@ The code is structured to perform a series of analyses and visualizations on the
   - **Note: This graph cannot be loaded in github, as plotly plots are not supported by github.**
 
 ## Usage
-To run the code, ensure you have a valid FRED API key set up in the `fred = Fred(api_key='your_api_key_here')` line. This is a free API key, which can be generated here: https://fred.stlouisfed.org/docs/api/api_key.html. I have pasted my API key in the code, so that it runs and this can be used too.
+To run the code, ensure you have a valid FRED API key set up. This is a free API key, which can be generated here: https://fred.stlouisfed.org/docs/api/api_key.html. I have pasted my API key in the code, so that it runs and this can be used too.
 
 ## Dependencies
 The project relies on several external libraries, which need to be installed for the script to function correctly:
