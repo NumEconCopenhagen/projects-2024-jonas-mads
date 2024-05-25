@@ -16,7 +16,7 @@ The code is structured to perform a series of analyses and visualizations on the
 - **Correlation Analysis:** Examines the correlation matrix to determine relationships between the indicators.
 - **Visualization of Individual Variables:** Plots each indicator to observe trends over time.
 - **Interactive Visualization:** Focuses on the relationship between Inflation Rate and the Federal Funds Rate using interactive Plotly graphs.
-- - **Note: This graph cannot be loaded in github, as plotly plots are not supported by github.**
+  - **Note: This graph cannot be loaded in github, as plotly plots are not supported by github.**
 
 ## Usage
 To run the code, ensure you have a valid FRED API key set up in the `fred = Fred(api_key='your_api_key_here')` line. This is a free API key, which can be generated here: https://fred.stlouisfed.org/docs/api/api_key.html. I have pasted my API key in the code, so that it runs and this can be used too.
