@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Feb 29 15:38:07 2024
-
-@author: jonas
-"""
-
 from types import SimpleNamespace
 
 class ExchangeEconomyClass:
