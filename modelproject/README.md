@@ -1,3 +1,9 @@
+# Model Project
+
+## Group Members
+- **Jonas Kristensen** (TVP211)
+- **Mads Rye** (BNC277)
+
 ## Solow Model
 This project offers functions to visualize and compute the Solow economic growth model and its extended version.
 
