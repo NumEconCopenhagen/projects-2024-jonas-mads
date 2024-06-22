@@ -5,12 +5,12 @@
 - **Mads Rye** (BNC277)
 
 ## Introduction
-This project conducts a detailed analysis of four key economic indicators using data from the FRED API: Gross Domestic Product (GDP), Inflation (CPI), Unemployment Rate, and Federal Funds Rate. The objective is to understand the interrelationships among these indicators and explore how they impact the US economy.
+This project conducts a detailed analysis of four key economic indicators using data from the FRED API: Gross Domestic Product (GDP), Inflation (CPI), Unemployment Rate, and Federal Funds Rate. The objective is to understand the interrelationships among these indicators and examine how they impact the US economy.
 
 ## Code Structure
-The code is structured to perform a series of analyses and visualizations on the economic data retrieved:
+The code is structured to perform a series of analyses and illustrations on the economic data retrieved:
 
-- **Data Retrieval:** Fetches historical data for each indicator from the FRED API.
+- **Data Retrieval:** Retrieves historical data for each indicator from the FRED API.
 - **Data Processing:** Processes the data by calculating percentage changes and filtering based on date ranges.
 - **Descriptive Statistics:** Generates descriptive statistics to provide a foundational understanding of the data.
 - **Correlation Analysis:** Examines the correlation matrix to determine relationships between the indicators.
