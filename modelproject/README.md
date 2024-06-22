@@ -13,4 +13,5 @@ This project offers functions to visualize and compute the Solow economic growth
 ### Dependencies
 - `numpy`
 - `matplotlib`
+- `ipywidgets`
 
