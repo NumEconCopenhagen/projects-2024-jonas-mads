@@ -26,4 +26,4 @@ The project relies on several external libraries, which need to be installed for
 - **fredapi:** To retrieve data from the FRED database. This one is included in the repository. 
 - **pandas:** For data manipulation and analysis.
 - **matplotlib:** For creating static plots of the data.
-- **plotly:** For generating interactive visualizations.
+- `plotly`: For generating interactive visualizations.
